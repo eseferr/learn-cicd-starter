@@ -1,4 +1,4 @@
-https://github.com/<OWNER>/<REPOSITORY>/actions/workflows/<WORKFLOW_FILE>/badge.svg
+![code coverage badge](https://github.com/YOUR_NAMESPACE/learn-cicd-starter/actions/workflows/ci.yml/badge.svg)
 
 # learn-cicd-starter (Notely)
 
