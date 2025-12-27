@@ -22,3 +22,5 @@ jobs:
 
         - name: Setup GCloud
           run: gcloud builds submit --tag us-central1-docker.pkg.dev/notely-482511/notely-ar-repo/notely:latest .
+          with:
+            service_account_key: ${{ secrets.GCP_CREDENTIALS }}
