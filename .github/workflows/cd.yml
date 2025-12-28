@@ -39,9 +39,9 @@ jobs:
 
       - name: Install Goose
         run: |
-          curl -L https://github.com/pressly/goose/releases/latest/download/goose_linux_amd64 -o goose
-          chmod +x goose
-          sudo mv goose /usr/local/bin/goose
+         curl -L https://github.com/pressly/goose/releases/latest/download/goose_linux_amd64 -o goose
+         chmod +x goose
+         sudo mv goose /usr/local/bin/goose
 
       - name: Migrate database
         run: ./scripts/migrateup.sh
