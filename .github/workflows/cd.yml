@@ -37,13 +37,10 @@ jobs:
       - name: Build and push Docker image
         run: gcloud builds submit --tag us-central1-docker.pkg.dev/notely-482511/notely-ar-repo/notely:latest .
 
-      - name: Install Goose
-        run: |
-         curl -L https://github.com/pressly/goose/releases/latest/download/goose_linux_amd64 -o goose
-         chmod +x goose
-         sudo mv goose /usr/local/bin/goose
+      - name: Install goose
+        run: go install github.com/pressly/goose/v3/cmd/goose@latest
 
-      - name: Migrate database
+      - name: Run migrations
         run: ./scripts/migrateup.sh
 
       - name: Deploy to Cloud Run
